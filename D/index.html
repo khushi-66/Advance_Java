@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            text-align: center;
+            background-color: rgb(215, 226, 213);
+            height:80%;
+        
+        }
+        .box3{
+            background-color: rgb(13, 71, 71);
+             display:inline-block;
+             border:3px solid  rgb(13, 71, 71);
+             border-radius: 10px;
+             margin-right:10px;
+            margin-top:15px;
+            color:white;
+            padding:10px;
+        }
+        .box2{
+            background-color: rgb(13, 71, 74);
+            color: white;
+            margin-bottom:15px;
+            padding:10px;
+            border-radius: 10px;;
+            border:3px solid rgb(13,71,74);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >
+    <h1>Signup Form</h1>
+ <form  action="form.do" method="get">
+    <label for="uname" placeholder="Enter your name">UserName  : </label>
+    <input type="text"id="uname" name="uname" required><br><br><br>
+
+     <label for="email" placeholder="Enter your email">UserEmail  : </label>
+    <input type="email"id="email" name="email" required><br><br><br>
+
+     <label for="psb" placeholder="Enter password ">Password  : </label>
+    <input type="password"id="psb" name="password" required><br><br><br>
+
+     <label for="ph" placeholder="Enter phone no.">phone No. : </label>
+    <input type="number"id="ph" name="ph" required><br><br><br>
+
+    <input type ="submit" class="box2" value="Submit">
+    </form>   
+    <a class="box3" href="description.do">Click Here To Description</a> 
+   <a class="box3" href="lorem.do">Click Here To lorem</a> 
+</div>
+   
+</body>
+   
+
+    
+
+
+</html>

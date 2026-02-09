@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    
+            body{
+    background-color:#f4f6f8f1 ;
+}
+        
+        .x{
+            padding:10px;
+            margin-bottom:15px;
+            border-radius: 8px;
+            border: 3px solid rgb(248, 248, 244);
+             background-color:  rgb(66, 131, 138);
+             font-size: medium;
+              color:rgb(248, 238, 244);
+        }
+        .box{
+            text-align: center;
+              border: 0.5px solid rgb(197, 183, 183);
+            box-shadow: 5px 5px 3px rgb(231, 226, 226);
+           display:inline-block;
+           padding:60px;
+           margin-left:35%;
+           margin-top:20px;
+          background-color: #f8f9fa;;
+            
+        }
+        form{
+            margin-top:30px;
+           
+        }
+
+        .submit{
+            padding:10px;
+          border-radius: 7px;
+            border: 3px solid rgb(44, 94, 94);;
+            background-color: rgb(44, 94, 94);
+             color:rgb(248, 238, 244);
+        }
+
+        .submit:hover{
+            background-color:  rgb(66, 131, 138);
+             border: 3px solid rgb(66, 131, 138);;
+        }
+
+         .btn{
+          text-decoration: none;
+          color:rgb(241, 234, 232);
+          
+          margin-bottom:10px;
+          
+        }
+
+        .otp{
+            width:20px;
+            height:20px;
+            border:1 ps solid rgb(61, 60, 60);
+            border-radius: 5px;
+        }
+    #verifyphone{
+        margin-top:20px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <button class="x">SignUp Form</button>
+ <form   action="signup.do" enctype="multipart/form-data" method="post" >
+  
+       <p1>User Name :
+<input type="text" name="name"  id="username" placeholder="Type name" required>
+      </p1><br><br>
+       
+     <p1>Email :
+<input type="email" name="email"  id="email" placeholder="Type email" required> 
+     </p1><br><br>
+       
+       <p1>Password :
+ <input type="password" name="psb"  id="password" placeholder="Type Password" required> 
+       </p1><br><br>
+      
+       <p1>Upload Pic  :
+<input  type="file"  name="pic"  required> 
+       </p1><br><br>
+       
+       <p1>Phone Number  :
+ <input  type="number" id="phone" name="phone"  required> 
+       </p1><br>
+      
+       
+       <p id="sendotp_box" >  
+        <input type="button" value="Send OTP" id="sendotp"class="submit btn">
+            </p>
+       
+    <div id="otp_box" style="display:none;">
+       <p placeholder="Enter OTP" type="text"name="otp">Enter OTP
+   <input type="text" maxlength="1" class="otp">
+         <input type="text" maxlength="1" class="otp">
+          <input type="text" maxlength="1"class="otp">
+           <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+             <input type="text" maxlength="1" class="otp"></p><br><br>
+            <p><input type="button" value="Verify Phone" class="submit btn"id="verifyphone"></p>
+    </div>
+
+       <p id="signup_box" style="display:none;">
+        <input  type="submit"  class="submit"value="SignUp" >
+         </p>
+       </form><br><br>
+     <a href="index.html" class="submit btn">Back</a>
+    </div>
+   <script>
+   const phone = document.querySelector('#phone');
+
+        const sendotp_box = document.querySelector('#sendotp_box');
+        const sendotp = document.querySelector('#sendotp');
+
+        const otp_box = document.querySelector('#otp_box');
+        const otp = document.querySelector('#otp');
+        const verifyphone = document.querySelector('#verifyphone');
+
+        const signup_box = document.querySelector('#signup_box');
+            //send OTP
+           const sendOTP=async ()=>{
+                 let response=await fetch('sendotp.do?phone='+phone.value);
+                 let result=await response.text();
+                 return result;
+            }
+
+
+
+        sendotp.addEventListener('click',()=>{
+
+            sendOTP().then((data)=>{
+                console.log(data)
+                  if(data=='true'){
+                     sendotp_box.style.display='none';
+                     otp_box.style.display='block';
+                  }
+            }).catch((error)=>{
+                console.log(error);
+            });
+
+
+        });
+
+        const inputsotp=document.querySelectorAll('.otp');
+
+//verify OTP
+ const verifyPhone = async () => {
+
+       let response = await fetch('verifyotp.do?phone='+ phone.value +'&otp='+ `${inputsotp[0].value}${inputsotp[1].value}${inputsotp[2].value}${inputsotp[3].value}${inputsotp[4].value}${inputsotp[5].value}`);
+            let result = await response.text();
+
+            return result;
+        };
+         verifyphone.addEventListener('click', () => {
+            verifyPhone().then((data)=>{
+                if(data == 'true') {
+                    otp_box.style.display = 'none';
+                    signup_box.style.display = 'block';
+                }
+            }).catch((error)=>{
+                console.log(error);
+            });
+        });
+
+
+   </script>
+</body>
+</html>

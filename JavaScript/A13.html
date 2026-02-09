@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>duniya walon... ...</h1>
+    <hr>
+    <script>
+        console.log('---------1');
+
+        //local code block
+    {  //local scope variable
+        let x='golu';
+        console.log(x);
+    }
+    console.log('---------2',x);
+
+//     ---------1
+// L.html:15 golu
+// L.html:17 Uncaught ReferenceError: x is not defined
+//     at L.html:17:30
+    </script>
+</body>
+</html>

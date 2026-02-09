@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .a{
+
+        border: 3px solid red;
+        margin-bottom:5px;;
+    }
+    #x{
+        border:3px solid green;
+        padding:10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="x">
+      <div class="a">
+     <img src="./del.png" alt="delete image" id="1">
+      </div>
+     <div class="a">
+     <img src="./del.png" alt="delete image" id="2">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="3">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="4">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="5">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="6">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="7">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="8">
+      </div>
+      <div class="a">
+     <img src="./del.png" alt="delete image" id="9">
+      </div>
+       <div class="a">
+     <img src="./del.png" alt="delete image" id="10">
+      </div>
+    </div>
+   
+    <script>
+          const div=document.querySelector('#x');
+          div.addEventListener('click',(ev)=>{
+            if(ev.target.tagName == 'IMG')
+          ev.target.remove();
+          });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+public class C{
+    public static void main(String[]args){
+
+        String str="348947289dshigshdfkjxcg7462i798h9u8978hg78g8g8g7878";
+        for(int i=0; i<6;i++){
+          System.out.print(  (int)(Math.random()*100));   
+        }
+       
+    }
+} 
+ 

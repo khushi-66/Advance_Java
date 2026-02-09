@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 50px auto;
+            border: 1px solid red;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 10px 10px 10px #999;
+        }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <form action="signup.do" method="post">
+ <table>
+    <caption>Signup</caption>
+    <tfoot>
+         <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="SignUp" id="btn">
+                    </td>
+                </tr>
+    </tfoot>
+
+    <tbody>
+        <tr>
+                    <td class="a">User Name: </td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td class="a">Email: </td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td class="a">Password: </td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+<tr>
+    <td colspan="2">
+        <div class="g-recaptcha" data-sitekey=" 6LdRFSssAAAAAADqHqys7jttfRNIzm-p_kBiW-FS"></div>
+    </td>
+</tr>
+
+    </tbody>
+ </table>
+    </form>
+</body>
+</html>

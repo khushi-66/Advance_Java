@@ -1,0 +1,17 @@
+# Compiled files
+*.class
+
+# Maven / Build
+/target/
+
+# Eclipse IDE files
+/.settings/
+/.classpath
+/.project
+
+# Logs
+*.log
+*.env
+*.text
+twilio.text
+

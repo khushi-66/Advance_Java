@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index page...</h1><hr>
+
+    <table align="center" width="50%" border="1">
+
+    </table>
+    <hr>
+    <button id="btn">Show Records</button>
+    <script>
+        const btn=document.querySelector('#btn');
+        const tbl=document.querySelector('#tbl');
+
+
+        const records=[
+            {name:'jaggu',age:9,college:'dholakpur',branch:'cs'},
+        {name:'kaliya',age:6,college:'dholakpur2',branch:'AI'},
+        {name:'chotabheem',age:10,college:'balampur',branch:'DS'}
+        
+        ];
+        let i=0;
+        btn.addEventListner('click',()=>{
+         for( let student of records){
+            let row=tbl.insertRow(i++);
+            for(let prop in student){
+                let cell=row.insertCell(j++);
+                cell.innerText=student[prop];
+            }
+        }   
+        });
+        
+    
+    </script>
+</body>
+</html>

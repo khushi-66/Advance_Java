@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            text-align: center;
+            background-color: rgb(215, 226, 213);
+            height:80%;
+        
+        }
+        .box3{
+            background-color: rgb(13, 71, 71);
+             display:inline-block;
+             border:3px solid  rgb(13, 71, 71);
+             border-radius: 10px;
+             margin-right:10px;
+            margin-top:15px;
+            color:white;
+            padding:10px;
+        }
+        .box2{
+            background-color: rgb(13, 71, 74);
+            color: white;
+            margin-bottom:15px;
+            padding:10px;
+            border-radius: 10px;;
+            border:3px solid rgb(13,71,74);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >
+    <h1>Product Ordering Form</h1>
+ <form  action="form.do" method="get">
+    <label for="pname" placeholder="Enter your productname">productName  : </label>
+    <input type="text"id="pname" name="pname" required><br><br><br>
+
+     <label for="quantity" placeholder="Quantity">Quantity  : </label>
+    <input type="number"id="pname" name="pname" required><br><br><br>
+
+     <label for="price" placeholder="Enter price">Price  : </label>
+    <input type="number"id="pname" name="pname" required><br><br><br>
+
+   <label for="pname" placeholder="Enter your date">dispatchDate  : </label>
+    <input type="text"id="pname" name="pname" required><br><br><br>
+
+   <label for="pname" placeholder="Enter delivered date">deliverDate : </label>
+    <input type="text"id="pname" name="pname" required><br><br><br>
+
+   <label for="pname" placeholder="Enter time">orderedTime : </label>
+    <input type="text"id="pname" name="pname" required><br><br><br>
+    
+    <input type ="submit" class="box2" value="Order Now">
+    </form> 
+    <a class="box3" href="show.do">Show Product Details</a>
+    <a class="box3" href="description.do">Click Here To Description</a> 
+</div>
+   
+</body>
+   
+
+    
+
+
+</html>

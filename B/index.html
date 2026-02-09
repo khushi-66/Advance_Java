@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            text-align: center;
+            background-color: rgba(191, 216, 190, 0.945);
+            height:80%;
+            background-color:rgb(184, 208, 209);
+        }
+        .box3{
+            background-color: rgba(49, 33, 33, 0.973);
+             display:inline-block;
+             border:3px solid black;
+             margin-right:10px;
+            margin-top:15px;
+            color:white;
+            padding:10px;
+        }
+        .box2{
+            background-color: rgb(7, 44, 44);
+            color: white;
+            margin-bottom:15px;
+            padding:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >
+    <h1>Internship Registration Form</h1>
+ <form  action="form.do" method="get">
+    <label for="uname" placeholder="Enter your name">UserName  : </label>
+    <input type="text"id="uname" name="uname" required><br><br><br>
+
+     <label for="email" placeholder="Enter your email">UserEmail  : </label>
+    <input type="email"id="email" name="email" required><br><br><br>
+
+     <label for="psb" placeholder="Enter password ">Password  : </label>
+    <input type="password"id="psb" name="password" required><br><br><br>
+
+     <label for="ph" placeholder="Enter phone no.">phone No. : </label>
+    <input type="number"id="ph" name="ph" required><br><br><br>
+
+    <input type ="submit" class="box2" value="Submit">
+    </form>   
+    <a class="box3" href="description.do">Click Here To Description</a> 
+    </div>
+   
+</body>
+   
+
+    
+
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            border-radius: 5px;
+            border: 3px solid hsl(182, 25%, 50%); 
+            box-shadow: 3px 3px 5px  rgb(175, 163, 163);
+            padding:10px;
+            background-color:hsl(182,25%,50%) ;
+            font-size: medium;
+            margin:10px 
+        }
+
+        #btn:hover{
+            background-color: hsl(182, 24%, 45%);
+        }
+
+        body{
+            background-color: rgb(233, 230, 227);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="text-align:center;  ">
+<h1>File Upload </h1>
+      <form action ="upload.do" method="post" enctype="multipart/form-data">
+          <label  id ="file">Upload File  : </label>
+          <input type="file" name="dp" >
+          <br>
+          <br>
+          <input id ="btn" type="submit" value="Upload">
+      </form>
+
+    </div>
+      
+      
+</body>
+</html>

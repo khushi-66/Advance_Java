@@ -1,0 +1,11 @@
+create  database stationarydb;
+create table product(
+      productid int auto_increment not null primary key,
+      deliverydate date,
+      dispatchdate date ,
+      quantity int ,
+      name varchar(20),
+      price varchar(20),
+      orderedtime time
+
+);

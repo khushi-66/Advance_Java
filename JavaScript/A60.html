@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="x">Index page...</h1><hr>
+    <script>
+         
+
+     //case1
+      console.log(this);
+      const x=document.querySelector('#x');
+    //   x.addEventListener('mouseover',()=>{
+    //    // this.innerText='jay ho';//fail
+    //    console.log(this);
+     // });
+
+
+//case2
+    let i=0;
+      x.addEventListener('mouseover',function(){
+     this.innerText='jay ho '+ i++;
+     //  console.log(this );
+        });
+
+
+//case3
+    function Student(){
+        console.log(this,'........'); }
+    const obj=new Student();
+  Student();
+    </script>
+</body>
+</html>

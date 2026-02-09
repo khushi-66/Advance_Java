@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>C page...</h1>
+     <hr>
+
+     <%= session.getAttribute("info") %>
+     <hr>
+     <%= session.getAttribute("more_info") %>
+     <hr>
+     <a href="index.html">Index page...</a>
+</body>
+</html>

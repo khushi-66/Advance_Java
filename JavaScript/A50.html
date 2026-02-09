@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+             font-size:22px;
+             font-weight:bold;
+             background-color: rgb(90, 148, 107);
+             color:#fff;
+             padding:8px 14px;
+             border:5px solid rgb(59, 48, 48);
+             border-radius:7px;
+             box-shadow:5px 5px 5px #916a6a;
+        }
+    </style>
+</head>
+<body>
+<button class="btn">Process</button>
+ <select id="sel">
+  <option >Select</option>
+ </select><hr>
+ <table id = "tbl" align="center" width="5%">
+
+ </table>
+
+
+ <script>
+  const arr=[34,8,43,56,66,79,14];
+  const btn=document.querySelector('#btn');
+  const tbl=document.querySelector('#tbl');
+   const sel=document.querySelector('#sel');
+   btn.addEventListner('click',()=>{
+    arr.forEach((next)=>{
+      let row=document.createElement('tr');
+      tbl.append(row);
+      let cell=documnet.createElement('td');
+      tbl.append(cell);
+      cell.innerText=next;
+    })
+   });
+</script>
+
+</body>

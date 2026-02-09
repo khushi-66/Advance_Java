@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .a{
+            display:block;
+            margin-bottom: 10px;;
+        }
+
+        .btn{
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="upload.do" enctype="multipart/form-data" method="post">
+        
+          <h1>
+         Select File : <input type="button"  value="Add More"class="add_more" >
+          </h1>  
+           <div class="box">
+            <input type="file" name="x0" class="a">
+        </div>
+        <input type="submit" value="Upload" class="btn" required>
+    </form>
+<script>
+
+        let i=1;
+      const box=document.querySelector('.box');
+       const addMore=document.querySelector('.add_more');
+       addMore.addEventListener('click',()=>{
+        let ele=document.createElement('input');
+        ele.type='file';
+        ele.name= 'x' + i++;
+        ele.className='a';
+        ele.requird="true";
+        box.append(ele);      
+        console.log(ele);
+      });
+    
+       
+
+</script>
+
+    
+</body>
+</html>

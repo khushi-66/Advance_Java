@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="x">
+        <img src="del.png" id="1">
+        <img src="del.png" id="2">
+        <img src="del.png" id="3">
+        <img src="del.png" id="4">
+        <img src="del.png" id="5">
+        <img src="del.png" id="6">
+    </div>
+
+
+    <script>
+        const x = document.querySelector('#x');
+        const dels = document.querySelectorAll('img');
+
+        dels.forEach((next) => {
+            next.addEventListener('click', function() {
+                console.log(this);
+                // x.remove(this);
+               this.remove();
+            });
+        });
+    </script>
+</body>
+</html>

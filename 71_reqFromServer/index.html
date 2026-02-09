@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../68_passwordEncryption/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="containner text-center mt-5">
+    <div class="row">
+      <div class="col">
+
+      <h1>Index Page.....</h1>
+   <br>
+   <a href="news.do">-:  Tesla News :-</a>
+   <button type="button" id="btn"class="btn btn-primary" >-: Tesla News :-</button>  
+      </div>
+    </div>
+  </div>
+   
+   <script>
+      const btn=document.querySelector('#btn');
+      const reqNews=async ()=>{
+        let response =await fetch('news.do');
+        let result =await response.json();
+        return result;
+      };
+
+      btn.addEventListener('click',()=>{
+           reqNews().then((data)=>{
+             console.log(data);
+           }).catch((error)=>{
+                console.log(error);
+           })
+      });
+      </script>
+</html>

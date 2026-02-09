@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .a{
+
+        border: 3px solid red;
+        margin-bottom:5px;;
+    }
+    #x{
+        border:3px solid green;
+        padding:10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="x">
+      
+     <img src="./del.png" alt="delete image" id="1">
+       <img src="./del.png" alt="delete image" id="2">
+       <img src="./del.png" alt="delete image" id="3">
+       <img src="./del.png" alt="delete image" id="4">
+       <img src="./del.png" alt="delete image" id="5">
+       <img src="./del.png" alt="delete image" id="6">
+       <img src="./del.png" alt="delete image" id="7">
+       <img src="./del.png" alt="delete image" id="8">
+       <img src="./del.png" alt="delete image" id="9">
+        <img src="./del.png" alt="delete image" id="10">
+      
+      </div>
+   
+    <script>
+          const div=document.querySelector('#x');
+          const dels=document.querySelectorAll('img');
+          div.addEventListener('click',(ev)=>{
+            console.log(ev.target);
+          });
+          dels.forEach((next)=>{
+            next.addEventListener('click',function(){
+           console.log(this);
+           //x.remove(this);
+           this.remove();
+            });
+          });
+
+
+    </script>
+</body>
+</html>
