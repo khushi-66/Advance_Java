@@ -40,10 +40,14 @@ Each directory represents a small practice project or a concept-based implementa
 Example:
 
 Advanced-Java
-├── jdbc-crud
-├── servlet-minapp
-├── jsp-Product-management
-├── jsp-User-management
+*  ├── jdbc-Signup
+*  ├── servlet-minapp
+*  ├── jsp-Ajax
+*  ├── jsp-PasswordEncryption
+*  ├── sendEmail
+*  ├── sendSMS
+*  ├── FileUpload
+*  ├── Form Validation
 
 ---
 
