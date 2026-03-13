@@ -5,37 +5,24 @@ This repository contains my **Advanced Java practice projects and concept implem
 The purpose of this repository is to understand core **Advanced Java technologies** such as Servlets, JSP, JDBC, and web application architecture through hands-on coding practice.
 
 ---
-## ⚙️ Installation & Setup
+## ⚙️ Prerequisites
 
-Follow these steps to run the Advanced Java projects locally.
-
-### 1. Clone the Repository
-
-git clone https://github.com/your-username/Advanced-Java-Practice.git
-
-### 2. Navigate to Project Folder
-
-cd Advanced-Java-Practice
-
-### 3. Install Required Tools
-
-Make sure the following tools are installed on your system:
+Before running the examples, make sure the following are installed:
 
 * Java JDK 8 or higher
 * Apache Tomcat Server
+* MySQL (for JDBC examples)
 * IDE (IntelliJ IDEA / Eclipse)
 
-### 4. Configure the Server
+## ▶️ How to Run
 
-1. Import the project into your IDE
-2. Configure Apache Tomcat server
-3. Deploy the project on the server
+1. Clone the repository
 
-### 5. Run the Application
+git clone https://github.com/your-username/Advanced-Java-Practice.git
 
-Start the Tomcat server and open in browser:
+2. Open the project in your IDE.
 
-http://localhost:8080
+3. Run the Java files or deploy servlet projects on Apache Tomcat.
 
 ## Key Concepts Covered
 
